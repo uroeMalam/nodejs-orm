@@ -52,7 +52,7 @@ const deleted = async (req,res)=>{
     }
 }
 
-const querySQL = async(req,res)=>{
+const join = async(req,res)=>{
     try {
         await sequelize.query('SELECT * from countries where region_id = :regionId',
         {replacements : {regionId : req.params.id},type : sequelize.QueryTypes.SELECT})
@@ -70,5 +70,5 @@ export default {
     create,
     update,
     deleted,
-    querySQL
+    join
 }
