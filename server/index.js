@@ -21,7 +21,17 @@ app.use(async(req,res,next)=> {
     next()
 })
 
+// root
+app.get('/',(req,res)=> {
+    res.setHeader('Content-Type','text/plain')
+    res.end('Hello gan')
+})
+
+// routes
 app.use('/regions',routes.regionsRoute)
+
+
+
 
 const dropDatabaseSync = false
 
