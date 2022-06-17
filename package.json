@@ -4,7 +4,8 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "nodemon --exec babel-node ./server/index.js"
+    "start": "nodemon --exec babel-node ./server/index.js",
+    "db" : "sequelize-auto -o ./schemas -d HR -h localhost -u postgres -p 5432 -x root -e postgres"
   },
   "dependencies": {
     "express" : "^4.18.1",
