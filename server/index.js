@@ -28,7 +28,16 @@ app.get('/',(req,res)=> {
 })
 
 // routes
+app.use('/countries',routes.countriesRoute)
+app.use('/departments',routes.departmentsRoute)
+app.use('/dependents',routes.dependentsRoute)
+app.use('/employees',routes.employeesRoute)
+app.use('/jobs',routes.jobsRoute)
+app.use('/locations',routes.locationsRoute)
+app.use('/projectAssignments',routes.projectAssignmentsRoute)
+app.use('/projects',routes.projectsRoute)
 app.use('/regions',routes.regionsRoute)
+
 
 
 
