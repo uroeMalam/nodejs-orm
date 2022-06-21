@@ -5,6 +5,7 @@ const router = Router()
 
 // basic route
 router.get('/', indexController.dependentsController.findAll)
+router.get('/newRoute', indexController.dependentsController.newRoute) //join sequelize
 router.get('/:id', indexController.dependentsController.findOne)
 router.post('/', indexController.dependentsController.create)
 router.put('/:id', indexController.dependentsController.update)

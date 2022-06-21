@@ -68,11 +68,25 @@ const join = async(req,res)=>{
     }
 }
 
+const newRoute = async (req,res)=>{
+    try {
+        const countries = await req.context.models.countries.findAll({
+            include: [{
+                all:true
+              }]
+        })
+        return res.send(countries)
+    } catch (error) {
+        return res.status(404).send(error)
+    }
+}
+
 export default {
     findAll,
     findOne,
     create,
     update,
     deleted,
-    join
+    join,
+    newRoute
 }

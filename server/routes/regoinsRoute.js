@@ -5,6 +5,7 @@ const router = Router()
 
 // basic route
 router.get('/', indexController.regionscontroller.findAll)
+router.get ('/newRoute', indexController.regionscontroller.newRoute) // LEFT OUTER JOIN with sequelize
 router.get('/:id', indexController.regionscontroller.findOne)
 router.post('/', indexController.regionscontroller.create)
 router.put('/:id', indexController.regionscontroller.update)

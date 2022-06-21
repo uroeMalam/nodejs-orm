@@ -5,6 +5,7 @@ const router = Router()
 
 // basic route
 router.get('/', indexController.employeesController.findAll)
+router.get('/newRoute', indexController.employeesController.newRoute) //join
 router.get('/:id', indexController.employeesController.findOne)
 router.post('/', indexController.employeesController.create)
 router.put('/:id', indexController.employeesController.update)
